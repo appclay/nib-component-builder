@@ -4,6 +4,7 @@ var path      = require('path');
 var validator = require('component-validator');
 var resolver  = require('component-resolver');
 var builder   = require('component-builder');
+var sass      = require('component-builder-sass');
 
 /**
  * Create a directory if it doesn't already exist
