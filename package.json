@@ -8,6 +8,6 @@
     "component-validator": "~1.1",
     "component-resolver": "~1.1",
     "component-builder": "~1.1",
-    "component-builder-sass": "~0.1.1"
+    "component-sass": "~0.1.2"
   }
 }

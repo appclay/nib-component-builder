@@ -4,7 +4,7 @@ var path      = require('path');
 var validator = require('component-validator');
 var resolver  = require('component-resolver');
 var builder   = require('component-builder');
-var sass      = require('component-builder-sass');
+var sass      = require('component-sass');
 
 /**
  * Create a directory if it doesn't already exist
@@ -170,7 +170,7 @@ module.exports = function(directory, options, callback) {
   function buildStyles(tree, options) {
     builder.styles(tree, options)
       .use('styles', builder.plugins.css())
-      .use('styles', function(file) { file.string = file.extension === 'scss'; })
+      .use('files', function(file) { file.string = file.extension === 'scss'; })
       .use('styles', builder.plugins.urlRewriter())
       .end(function (err, output) {
         if (err) return done(err);
